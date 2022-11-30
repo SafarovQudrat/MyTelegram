@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="MYTelegram" customModuleProvider="target">
+            <connections>
+                <outlet property="continueBtn" destination="zsJ-hP-kop" id="tDc-Mc-AEA"/>
+                <outlet property="numberTf" destination="gAO-ML-5jr" id="PVO-Kp-jaL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LgS-85-Rh4">
+                    <rect key="frame" x="20" y="109" width="353" height="238"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="CGB-L9-QdE">
+                            <rect key="frame" x="116.66666666666666" y="0.0" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="CGB-L9-QdE" secondAttribute="height" id="crj-gm-FuI"/>
+                                <constraint firstAttribute="width" constant="120" id="tD3-lO-Wrz"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DB9-lo-jzX">
+                            <rect key="frame" x="110.33333333333336" y="140" width="132.66666666666663" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm your country code and enter  your phone number." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn8-UC-i7e">
+                            <rect key="frame" x="10" y="190" width="333" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="bn8-UC-i7e" firstAttribute="leading" secondItem="LgS-85-Rh4" secondAttribute="leading" constant="10" id="deF-lm-TBX"/>
+                        <constraint firstAttribute="trailing" secondItem="bn8-UC-i7e" secondAttribute="trailing" constant="10" id="eUm-b6-oPd"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gt7-BZ-aog">
+                    <rect key="frame" x="25" y="397" width="343" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+998" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTZ-CY-yjp">
+                            <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00 000 00 00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-ML-5jr">
+                            <rect key="frame" x="74" y="0.0" width="269" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                    <color key="value" systemColor="systemGrayColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fH8-LB-GMc"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsJ-hP-kop">
+                    <rect key="frame" x="30" y="728" width="333" height="60"/>
+                    <color key="backgroundColor" white="0.25" alpha="0.30326469370860926" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Rzp-NE-6U1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" systemColor="systemGrayColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="continueTapped:" destination="-1" eventType="touchUpInside" id="m0H-UA-f0g"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zsJ-hP-kop" secondAttribute="trailing" constant="30" id="1mF-xX-Ekw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zsJ-hP-kop" secondAttribute="bottom" constant="30" id="28a-eK-H35"/>
+                <constraint firstItem="LgS-85-Rh4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2Bk-33-abl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LgS-85-Rh4" secondAttribute="trailing" constant="20" id="5Qv-0p-wGN"/>
+                <constraint firstItem="zsJ-hP-kop" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="fRx-nX-Iej"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gt7-BZ-aog" secondAttribute="trailing" constant="25" id="g9F-xf-MAR"/>
+                <constraint firstItem="Gt7-BZ-aog" firstAttribute="top" secondItem="LgS-85-Rh4" secondAttribute="bottom" constant="50" id="u6q-KS-6wL"/>
+                <constraint firstItem="LgS-85-Rh4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="yfC-sj-vVi"/>
+                <constraint firstItem="Gt7-BZ-aog" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="yja-V3-aDh"/>
+            </constraints>
+            <point key="canvasLocation" x="118" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="phone" width="244" height="244"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
