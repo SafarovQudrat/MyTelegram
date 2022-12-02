@@ -61,6 +61,15 @@ class ContactsVC: UIViewController {
 
 }
 extension ContactsVC:UITableViewDelegate {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "delete") { _, _, _ in
+            self.arr.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+        let configuration = UISwipeActionsConfiguration(actions: [delete])
+
+        return configuration
+    }
     
 }
 extension ContactsVC:UITableViewDataSource {
