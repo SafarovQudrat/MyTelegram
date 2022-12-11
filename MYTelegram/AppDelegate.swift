@@ -17,7 +17,12 @@ var window: UIWindow?
         let vc = LoginVC(nibName: "LoginVC", bundle: nil)
         let navvc = UINavigationController(rootViewController: vc)
        let tabbar = TabBar()
-        window?.rootViewController = tabbar
+        if cache.bool(forKey: "isTapped") {
+            window?.rootViewController = tabbar
+        }else {
+            window?.rootViewController = navvc
+        }
+        
         window?.makeKeyAndVisible()
         return true
     }

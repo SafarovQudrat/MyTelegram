@@ -28,14 +28,6 @@ class TabBar: UITabBarController {
         let appearance = UITabBarAppearance()
         appearance.backgroundEffect = UIBlurEffect(style: .systemChromeMaterialDark)
            tabBar.scrollEdgeAppearance = appearance
-        
-        
-        
-        
-        
-        
-        
-        
         self.viewControllers = [firstnavvc,secondnavvc,thirdnavvc]
     }
     

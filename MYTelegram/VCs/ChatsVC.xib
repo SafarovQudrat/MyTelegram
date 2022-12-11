@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatsVC" customModule="MYTelegram" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="mbI-jl-g2l" id="IRI-wt-bU3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +17,21 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mbI-jl-g2l">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="138" y="20"/>
+            <constraints>
+                <constraint firstItem="mbI-jl-g2l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1CL-ks-Srg"/>
+                <constraint firstAttribute="trailing" secondItem="mbI-jl-g2l" secondAttribute="trailing" id="7wl-uD-Jrr"/>
+                <constraint firstItem="mbI-jl-g2l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="U1x-lu-xks"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mbI-jl-g2l" secondAttribute="bottom" id="jgK-y1-D6u"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
 </document>

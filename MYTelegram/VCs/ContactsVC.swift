@@ -18,10 +18,10 @@ class ContactsVC: UIViewController {
         setUpTableView()
         addBtn()
     }
+   
     func setNavBAr() {
         let apperence = UINavigationBarAppearance()
         apperence.backgroundEffect = UIBlurEffect(style: .systemChromeMaterialDark)
-        apperence.backgroundColor = .black
         apperence.titleTextAttributes =  [.foregroundColor: UIColor.white]
         self.navigationItem.scrollEdgeAppearance = apperence
         self.navigationItem.title = "Contacts"
@@ -74,7 +74,7 @@ extension ContactsVC:UITableViewDelegate {
 }
 extension ContactsVC:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arr.count
+        arr.count 
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsTVC", for: indexPath) as? ContactsTVC else{return UITableViewCell()}

@@ -34,6 +34,7 @@ class RegisterVC: UIViewController {
         istapped = true
         cache.setValue(nameTf.text, forKey: "Name")
         cache.setValue(SurnameTf.text, forKey: "Surname")
+        cache.setValue(istapped, forKey: "isTapped")
         loadImage()
 //        let vc = SettingsVC(nibName: "SettingsVC", bundle: nil)
 //        vc.imgViewBtn.setImage(imgbtn.currentImage ?? UIImage(systemName: "person.circle"), for: .normal)
