@@ -11,7 +11,7 @@ class ContactsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var arr:[UserDM] = [UserDM(img: UIImage(systemName: "person.circle")!, fullname: "", lasttime: "")]
+    var arr:[UserDM] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBAr()
@@ -63,7 +63,7 @@ class ContactsVC: UIViewController {
 extension ContactsVC:UITableViewDelegate {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "delete") { _, _, _ in
-            self.arr.remove(at: indexPath.row)
+            self.arr.remove(at: indexPath.row-1)
             tableView.reloadData()
         }
         let configuration = UISwipeActionsConfiguration(actions: [delete])
@@ -74,15 +74,16 @@ extension ContactsVC:UITableViewDelegate {
 }
 extension ContactsVC:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arr.count 
+        arr.count+1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsTVC", for: indexPath) as? ContactsTVC else{return UITableViewCell()}
         guard let searchcell = tableView.dequeueReusableCell(withIdentifier: "SearchTVC", for: indexPath) as? SearchTVC else{return UITableViewCell()}
-        cell.updatecell(user: arr[indexPath.row])
+        
         if indexPath.row == 0 {
             return searchcell
         } else {
+            cell.updatecell(user: arr[indexPath.row-1])
             return cell
         }
     }

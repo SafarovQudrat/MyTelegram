@@ -12,8 +12,8 @@ class ChatsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var a = 0
-    var arr:[UserDM] = [UserDM(fullname: "ckdvhbvih", lasttime: "wbihdcbwvuycbwivy")]
+  
+    var arr:[UserDM] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         addBtn()
@@ -44,7 +44,7 @@ class ChatsVC: UIViewController {
         self.navigationItem.leftBarButtonItem = sortbtn
     }
     @objc func addTapped() {
-        a+=1
+     
         tableView.reloadData()
     }
     @objc func sortTapped() {

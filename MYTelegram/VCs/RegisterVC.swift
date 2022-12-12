@@ -18,10 +18,21 @@ class RegisterVC: UIViewController {
     var istapped = false
     override func viewDidLoad() {
         super.viewDidLoad()
+
         signUpBtn.backgroundColor = #colorLiteral(red: 0.2509803922, green: 0.2509803922, blue: 0.2509803922, alpha: 0.2526127897)
         saveImage()
     }
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func imgTapped(_ sender: Any) {
         let imgVC = UIImagePickerController()
         imgVC.delegate = self
@@ -36,8 +47,7 @@ class RegisterVC: UIViewController {
         cache.setValue(SurnameTf.text, forKey: "Surname")
         cache.setValue(istapped, forKey: "isTapped")
         loadImage()
-//        let vc = SettingsVC(nibName: "SettingsVC", bundle: nil)
-//        vc.imgViewBtn.setImage(imgbtn.currentImage ?? UIImage(systemName: "person.circle"), for: .normal)
+
         if !((nameTf.text ?? "").isEmpty) && !((SurnameTf.text ?? "").isEmpty) {
             signUpBtn.backgroundColor = .tintColor
             signUpBtn.setTitleColor(.white, for: .normal)
@@ -53,6 +63,7 @@ class RegisterVC: UIViewController {
     
 
 }
+//MARK: - UIImagePickerControllerDelegate,UINavigationControllerDelegate
 extension RegisterVC:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let reciveIMG = info[.originalImage] as? UIImage
@@ -64,6 +75,7 @@ extension RegisterVC:UIImagePickerControllerDelegate,UINavigationControllerDeleg
     }
     
 }
+//MARK: -
 extension RegisterVC {
     func saveImage() {
         guard let data = imgbtn.currentImage!.jpegData(compressionQuality: 0.5) else { return }
@@ -76,5 +88,11 @@ extension RegisterVC {
          let decoded = try! PropertyListDecoder().decode(Data.self, from: data)
          let image = UIImage(data: decoded)
         
+    }
+}
+//MARK: -
+extension RegisterVC:UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("name=",nameTf.text)
     }
 }

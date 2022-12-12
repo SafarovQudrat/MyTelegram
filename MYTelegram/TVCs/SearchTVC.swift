@@ -17,7 +17,7 @@ class SearchTVC: UITableViewCell {
         
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.darkGray.cgColor
-        view.layer.cornerRadius = 25
+        view.layer.cornerRadius = 20
         
     }
 

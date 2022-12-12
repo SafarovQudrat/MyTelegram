@@ -13,3 +13,13 @@ struct UserDM {
     var lasttime:String
     var phoneNum:String?
 }
+extension UIViewController {
+    func addBorder(txt:[UIView]?) {
+        for i in txt! {
+            (i).layer.borderColor = UIColor.darkGray.cgColor
+            (i ).layer.borderWidth = 1
+            (i ).layer.cornerRadius = 15
+        }
+    }
+}
+
